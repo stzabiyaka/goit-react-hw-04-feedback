@@ -15,24 +15,20 @@ export function App() {
   const handleClick = option => {
     switch (option) {
       case 'good':
-        setGood(incrementOption(good));
+        setGood(state => state + 1);
         break;
 
       case 'neutral':
-        setNeutral(incrementOption(neutral));
+        setNeutral(state => state + 1);
         break;
 
       case 'bad':
-        setBad(incrementOption(bad));
+        setBad(state => state + 1);
         break;
 
       default:
         console.log('No such a type of the feedback.');
     }
-  };
-
-  const incrementOption = option => {
-    return option + 1;
   };
 
   const countTotalFeedback = () => {
