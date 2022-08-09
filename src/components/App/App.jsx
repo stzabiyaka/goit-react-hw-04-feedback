@@ -49,7 +49,7 @@ export function App() {
       <Section title="Please leave feedback">
         <FeedbackOptions
           onLeaveFeedback={handleClick}
-          options={['good', 'neutral', 'bad']}
+          options={Object.keys({ good, neutral, bad })}
         />
       </Section>
 
